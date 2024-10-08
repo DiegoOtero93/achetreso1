@@ -1,0 +1,1203 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  
+  background-image: url(../../public/campo-de-futbol-niño.jpg);
+  background-size: cover;  /* Ocupa el 100% del ancho y alto, manteniendo la proporción */
+  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(../../public/campo-de-futbol-doble.jpg); /* Cambia a la nueva imagen para móviles */
+    background-size: cover; /* Ajusta para que la imagen se vea completa */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo para mejorar el efecto visual */
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0000007b;
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente al header */
+
+  }
+  
+  .header__imagen {
+    max-width: 5rem;
+    height: 5rem;
+  }
+  
+  .header__nav {
+    margin-top: 20px;
+  }
+  
+  .header__lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-weight: bold; /* Negrita */
+  font-style: italic; /* Cursiva */
+  font-size: 1.3rem;
+  }
+  
+  .header__elementoLista {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente al header */
+  }
+  
+  .header__link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto de su elemento padre */
+  }
+  
+  .header__elementoLista:hover {
+    color: #007bff;
+  }
+  
+  .header__link:hover {
+    color: #dce715; /* Cambia el color del texto al pasar el mouse sobre cualquier enlace */
+  }
+  
+  .header__enlacesExtras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los enlaces */
+    margin-top: 20px; /* Espacio superior adicional */
+  }
+  
+  .header__enlaceExtra {
+    margin-left: 10px; /* Ajusta el margen si es necesario */
+  }
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px; /* Reducir el padding del header */
+    }
+  
+    .header__lista {
+      flex-direction: column; /* Cambiar a columnas para dispositivos pequeños */
+      gap: 10px; /* Espacio entre elementos */
+    }
+  
+    .header__elementoLista {
+      margin: 0; /* Eliminar el margen horizontal */
+      text-align: center; /* Alinear el texto al centro */
+    }
+  
+    .header__enlacesExtras {
+      margin-top: 10px; /* Reducir el espacio superior */
+    }
+  }
+  
+ /* Estilo para el botón de cerrar sesión */
+.header__enlaceExtra button {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Ajusta el relleno si es necesario */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+.header__enlaceExtra button:hover {
+  background-color: #d32f2f;
+}
+
+/* Estilo para el botón de iniciar sesión y registrarse */
+.header__link.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.header__link.button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  .header__enlaceExtra button,
+  .header__link.button {
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    padding: 8px 16px; /* Ajustar el relleno */
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  .header__enlaceExtra button,
+  .header__link.button {
+    font-size: 0.8rem; /* Reducir aún más el tamaño de la fuente */
+    padding: 6px 12px; /* Ajustar el relleno */
+  }
+}
+
+/* HERO IMAGEN */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.heroImage {
+  width: 100%;
+  height: 100vh; /* Ajustar si es necesario */
+  
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage__contenedorTexto {
+  background-color: rgba(80, 61, 61, 0.2); /* Fondo blanco semi-transparente */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra más prominente */
+  border-radius: 10px;
+  padding: 20px; /* Aumentar el espaciado interno */
+  max-width: 80%; /* Ancho máximo del contenedor */
+  text-align: center;
+  transition: background-color 0.8s ease; /* Efecto de transición */
+}
+
+.heroImage__texto {
+  font-family: 'Anton', sans-serif; /* Asegurarse de que la fuente esté bien definida */
+  font-size: 3rem; 
+  color: rgb(242, 242, 242);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); /* Sombra más pronunciada */
+  text-align: center;
+  transition: transform 0.3s ease; /* Efecto de transformación */
+}
+
+.heroImage__texto:hover {
+  transform: scale(1.05); /* Aumentar el tamaño del texto al pasar el cursor */
+}
+.galeria {
+  padding: 20px;
+  text-align: center;
+}
+
+.galeria h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.sector {
+  margin-bottom: 40px; /* Espacio entre secciones */
+}
+
+.sector h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.imagenes {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+  justify-content: center; /* Centra las imágenes */
+}
+
+.imagenes img {
+  width: 200px; /* Ajusta el tamaño de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  margin: 10px; /* Espaciado entre imágenes */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.2s; /* Efecto de transición */
+}
+
+.imagenes img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* BOTON TEXTO */
+.explorar-boton {
+  background-color: #e67d221c; /* Color al pasar el ratón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 15px 30px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.explorar-boton:hover {
+  
+  background-color: #f39d1250; /* Color de fondo */
+
+}
+
+
+.seccionCardsInicio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: -13rem; /* Empuja el contenido hacia abajo */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Crea tres columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.seccionCardsInicio__Cards {
+  width: 100%;
+  height: 13rem;
+  background-color: #ffffff3c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+  
+}
+
+.seccionCardsInicio__Cards:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+/* Media queries para ajustes específicos */
+@media (max-width: 768px) {
+  .seccionCardsInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Cambia a dos columnas en dispositivos más pequeños */
+  
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .seccionCardsInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; /* Cambia a una columna en dispositivos móviles */
+    
+  }
+}
+
+  
+  /* EStilos de fondo a cards ultimos lanzamientos */
+.seccionCardsInicio__Cards:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.775)), url('/public/GTA5.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  
+}
+
+.seccionCardsInicio__Cards:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.775)), url('/public/UFC2024.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.seccionCardsInicio__Cards:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.682), rgba(0, 0, 0, 0.775)), url('/public/FIFA2025.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+  
+  
+
+.seccionCardsInicio__titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.826);
+}
+
+.seccionCardsInicio__genero {
+  color: #eeeeee;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.seccionCardsInicio__precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f6f6f6; /* Color azul */
+}
+
+                                /* Seccion footer */
+.footer {
+  background-color: #ffffff39;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  
+  
+}
+
+/* Estilos para los iconos de redes sociales */
+.footer__rrss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__rrss > * {
+  font-size: 32px;
+  margin: 0 10px;
+  color: #0d0101;
+  transition: color 0.3s ease; 
+}
+
+.footer__rrss > *:hover {
+  color: #ff6600; /* Cambiar el color al hacer hover */
+}
+
+/* Estilo para el texto de derechos reservados */
+.footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.footer__rrss a {
+  text-decoration: none;
+  color: #242424;
+}
+
+.footer__rrss a:hover {
+  color: #ff6600; /* Cambiar el color al hacer hover */
+}
+/* Media queries para ajustes específicos */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px; /* Ajustar el padding para tablets */
+  }
+
+  .footer__rrss > * {
+    font-size: 20px; /* Ajustar el tamaño del icono para tablets */
+    margin: 0 8px; /* Ajustar el margen para tablets */
+  }
+
+  .footer p {
+    font-size: 12px; /* Ajustar el tamaño de la fuente para tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px; /* Ajustar el padding para móviles */
+  }
+
+  .footer__rrss > * {
+    font-size: 22px; /* Ajustar el tamaño del icono para móviles */
+    margin: 0 6px; /* Ajustar el margen para móviles */
+  }
+
+  .footer p {
+    font-size: 13px; /* Ajustar el tamaño de la fuente para móviles */
+  }
+}
+  
+  .botonArriba{
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    z-index: 1;
+    border: white 1px solid;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease-out;
+  }
+
+
+  .botonArriba:hover{
+    background-color: black;
+    color: white;
+  }
+  @media (max-width: 768px) {
+    .botonArriba {
+      bottom: 1rem;
+      right: 1rem; /* Ajustar la posición del botón para tablets */
+      padding: 0.4rem 0.8rem; /* Ajustar el padding para tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .botonArriba {
+      bottom: 0.5rem;
+      right: 0.5rem; /* Ajustar la posición del botón para móviles */
+      padding: 0.3rem 0.6rem; /* Ajustar el padding para móviles */
+      font-size: 0.9rem; /* Ajustar el tamaño de la fuente para móviles */
+    }
+  }
+
+  .team__imagen {
+    width: 20rem;
+    height: 40rem;
+  
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Efecto suave en hover */
+    background-size: cover;  /* Ocupa el 100% del ancho y alto, manteniendo la proporción */
+    background-size: contain;  /* Ajusta el tamaño de la imagen para que se vea completa */
+  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+}
+
+.team__imagen:hover {
+    transform: scale(1.05); /* Zoom ligero al pasar el ratón */
+    opacity: 0.9; /* Un poco de transparencia en hover */
+}
+
+.team__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    max-width: 1200px; /* Limita el ancho máximo para un diseño más controlado */
+    border: 1px solid #ccc; /* Borde delgado y color gris claro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */  
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    background-color: #ffffff70;
+    transition: transform 0.3s ease; /* Suave transición en hover */
+}
+
+.team__card:hover {
+    transform: scale(1.02); /* Efecto de zoom suave en hover */
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.team__contenedorTexto {
+    padding: 1.5rem; /* Añade un poco de espacio dentro del contenedor */
+}
+
+.team__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2e6da4; /* Color azul para el título */
+    text-align: center;
+    color: #000;
+    font-family: 'Lora', serif; /* Fuente personalizada, elegante y legible */
+    font-weight: bold; /* Negrita */
+  font-style: italic; /* Cursiva */
+}
+
+
+.team__texto {
+  font-family: 'Lora', serif; /* Fuente personalizada, elegante y legible */
+  font-size: 1.2rem; /* Tamaño de fuente un poco mayor para destacar */
+  line-height: 1.7; /* Espaciado de línea ligeramente aumentado */
+  color: #000; /* Color del texto en negro */
+  font-weight: bold; /* Negrita */
+  font-style: italic; /* Cursiva */
+  text-align: center; /* Centrar el texto */
+  margin: 1rem 0; /* Espacio adicional entre párrafos */
+}
+@media (max-width: 768px) {
+  .team {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+  }
+
+  .team__card {
+      flex-direction: column; /* Cambiar a columna para la tarjeta */
+      width: 90%; /* Ajustar el ancho de la tarjeta */
+      margin: 1rem auto; /* Centrar la tarjeta y espacio superior/inferior */
+  }
+
+  .team__imagen {
+      width: 100%; /* Ajustar la imagen para que ocupe el 100% del ancho de la tarjeta */
+      height: auto; /* Mantener la proporción de la imagen */
+  }
+
+  .team__titulo {
+      font-size: 1.5rem; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+  }
+
+  .team__texto {
+      font-size: 1rem; /* Ajustar el tamaño de fuente del texto */
+  }
+}
+.p.hachetreso{
+  font-family: 'Lora', serif; /* Fuente personalizada, elegante y legible */
+  font-size: 1.3rem; /* Tamaño de fuente un poco mayor para destacar */
+  line-height: 1.7; /* Espaciado de línea ligeramente aumentado */
+  color: #f4eeee; /* Color del texto en negro */
+  font-weight: bold; /* Negrita */
+  font-style: italic; /* Cursiva */
+  text-align: center; /* Centrar el texto */
+  margin: 1rem 0; /* Espacio adicional entre párrafos */
+}
+
+/* Cambiar color del texto de los títulos */
+.galeria .sector h2 {
+  color: #faf4f4; /* Cambia este color al que prefieras */
+  font-size: 23px; /* Ajusta el tamaño de la letra */
+  background-color: rgba(20, 20, 20, 0.367); /* Fondo alrededor de las letras */
+  border-radius: 10px; /* Bordes redondeados */
+  display: inline-block; /* Hace que el fondo ocupe solo el área alrededor del texto */
+  padding: 10px;
+  
+}
+
+/* Otras personalizaciones */
+.galeria h2:hover {
+  color: #ffbb00f0; /* Cambia el color cuando pasas el ratón por encima */
+  cursor: pointer; /* Cambia el cursor a pointer al pasar sobre el título */
+}
+
+.galeria {
+  padding: 20px;
+  text-align: center;
+}
+
+.sector {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sector h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.imagenes img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.imagenes img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+.carousel-img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: rgb(8, 8, 8);
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.torneos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-image: url('/imagenes/fondo-torneos.jpg'); /* Cambia esto por la imagen que prefieras */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.coming-soon-banner {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+  padding: 40px 60px;
+  border-radius: 15px;
+  color: #ffffff; /* Texto en blanco */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+}
+
+.coming-soon-banner h1 {
+  font-size: 3rem;
+  color: #ffcc00; /* Color dorado para que destaque */
+  margin-bottom: 15px;
+}
+
+.coming-soon-banner p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.coming-soon-date {
+  font-size: 1.2rem;
+  color: #ffcc00; /* Misma paleta que el título */
+}
+
+
+  
+
+  /* CAROUSEL IMAGENES */
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .carousel__titulo {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .carousel__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel__contenedor button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .carousel__contenedor button:hover {
+    color: #007bff;
+  }
+  
+  .carousel__imagenes {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .boton__left {
+    position: absolute;
+    left: -50px;
+  }
+  
+  .boton__right {
+    position: absolute;
+    right: -50px;
+  }
+  @media (max-width: 768px) {
+    .carousel__imagenes {
+      height: 250px; /* Ajusta la altura de la imagen para tablets más pequeñas */
+    }
+    
+    .boton__left {
+      left: -20px; /* Ajusta la posición del botón para tablets más pequeñas */
+    }
+    
+    .boton__right {
+      right: -20px; /* Ajusta la posición del botón para tablets más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel__titulo {
+      font-size: 1.5rem; /* Ajusta el tamaño del título para móviles */
+    }
+    
+    .carousel__contenedor button {
+      font-size: 1.5rem; /* Ajusta el tamaño del botón para móviles */
+    }
+    
+    .carousel__imagenes {
+      height: 200px; /* Ajusta la altura de la imagen para móviles */
+    }
+    
+    .boton__left {
+      left: -10px; /* Ajusta la posición del botón para móviles */
+    }
+    
+    .boton__right {
+      right: -10px; /* Ajusta la posición del botón para móviles */
+    }
+  }
+  
+  /* PanelDeControl.css */
+
+.seccion__main {
+  padding: 20px;
+}
+
+.seccion__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.seccion__cards {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seccion__cards h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+}
+
+.seccion__cards p {
+  margin-bottom: 8px;
+  padding: 0.5rem;
+
+}
+
+.seccion__cards a {
+  text-decoration: none;
+  color: #0b13ff;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  
+}
+
+.seccion__cards a:hover {
+  color: dodgerblue;
+}
+
+.pie__main {
+  margin-top: 20px;
+  text-align: center;
+  
+
+}
+/* Estilo para el botón de cerrar sesión */
+.boton__cerrarSesion {
+  background-color: #dc3545; /* Color de fondo rojo */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave para el color de fondo y la transformación */
+  position: fixed; /* Posición fija */
+  top: 10px; /* Espaciado desde la parte superior */
+  right: 10px; /* Espaciado desde la derecha */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.boton__cerrarSesion:hover {
+  background-color: #c82333; /* Color de fondo al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levantar al pasar el mouse */
+}
+
+.boton__cerrarSesion:active {
+  background-color: #bd2130; /* Color de fondo al hacer clic */
+  transform: translateY(0); /* Elimina el efecto de levantar al hacer clic */
+}
+
+/* Responsivo para el botón de cerrar sesión */
+@media (max-width: 480px ) {
+  .boton__cerrarSesion {
+    padding: 8px 16px; /* Reduce el espaciado interno en pantallas pequeñas */
+    font-size: 14.4px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+}
+/* Estilo para el contenedor del formulario */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el mensaje de error */
+.login__error {
+  color: red;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+/* Estilo para las etiquetas */
+.login__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Estilo para los campos de entrada */
+.login__input {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 10px 0 ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Estilo para el botón de envío */
+.login__submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsivo para el formulario de inicio de sesión */
+@media (max-width: 480px) {
+  .login__form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .login__label {
+    font-size: 0.9rem;
+  }
+
+  .login__input,
+  .login__submit-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* input de usuarios  */
+/* Estilo para el contenedor principal del formulario */
+.login-form__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el título del formulario */
+.login-form__titulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+.login-form__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para las etiquetas del formulario */
+.login-form__label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada del formulario */
+.login-form__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Estilo para el botón de envío del formulario */
+.login-form__submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el mensaje de éxito o error */
+.login-form__mensaje {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsivo para el formulario de inicio de sesión */
+@media (max-width: 480px) {
+  .login-form__main {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  .login-form__label {
+      font-size: 14.4px;
+  }
+
+  .login-form__input,
+  .login-form__submit-btn {
+      font-size: 14.4px;
+  }
+}
+/* input para registrarse */
+/* Estilo para el contenedor principal del formulario */
+.register-form__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilo para el título del formulario */
+.register-form__titulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+.register-form__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para las etiquetas del formulario */
+.register-form__label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Estilo para los campos de entrada del formulario */
+.register-form__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Estilo para el botón de envío del formulario */
+.register-form__submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form__submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el mensaje de éxito o error */
+.register-form__mensaje {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsivo para el formulario de registro */
+@media (max-width: 480px) {
+  .register-form__main {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  .register-form__label {
+      font-size: 14.4px;
+  }
+
+  .register-form__input,
+  .register-form__submit-btn {
+      font-size: 14.4px;
+  }
+}
+
+/* reservas */
+.reservas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #ffffff39;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  max-width: 600px; /* Ancho máximo */
+  margin: 2rem auto; /* Centrar el contenedor */
+}
+
+.reservas-titulo {
+  font-family: 'Lora', serif; /* Fuente personalizada */
+  font-size: 2rem; /* Tamaño de fuente */
+  color: #2e6da4; /* Color azul */
+  margin-bottom: 1rem; /* Margen inferior */
+  text-align: center; /* Centrar el texto */
+}
+
+.reservas-calendario {
+  margin-bottom: 1.5rem; /* Margen inferior */
+  
+}
+
+.hora-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+.hora-selector label {
+  font-size: 1rem; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+}
+
+.hora-selector select {
+  padding: 0.5rem; /* Espaciado interior */
+  font-size: 1rem; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  width: 100%; /* Ancho completo */
+  max-width: 200px; /* Ancho máximo */
+  margin-top: 0.5rem; /* Margen superior */
+  cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+.reservar-boton {
+  padding: 0.7rem 1.5rem; /* Espaciado interior */
+  background-color: #2e6da4; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.reservar-boton:hover {
+  background-color: #1c4d80; /* Color al pasar el mouse */
+}
